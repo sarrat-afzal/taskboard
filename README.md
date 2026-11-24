@@ -3,7 +3,7 @@
 A Kanban task board built with React, Vite and Supabase. Each visitor gets a private guest
 account automatically, and Row Level Security makes sure they only ever see their own tasks.
 
-Live demo: ADD_YOUR_VERCEL_URL_HERE
+Live demo: https://taskboard-sooty-eight.vercel.app
 
 ## Features
 
