@@ -110,3 +110,9 @@ create trigger tasks_activity_insert after insert on public.tasks
   for each row execute function public.log_task_activity();
 create trigger tasks_activity_update before update on public.tasks
   for each row execute function public.log_task_activity();
+
+-- API access (newer Supabase projects don't expose new tables automatically)
+grant usage on schema public to authenticated;
+grant select, insert, update, delete on public.tasks to authenticated;
+grant select, insert, delete on public.comments to authenticated;
+grant select on public.task_activity to authenticated;
